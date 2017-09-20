@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     EditText pass;
     Button log;
     Button sign;
+    public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.button:
                 Intent i=new Intent(this,Main3Activity.class);
                 String mess="Hello\n"+user.getText().toString();
-                i.putExtra("ggg", mess);
+                i.putExtra(EXTRA_MESSAGE, mess);
                 startActivity(i);
                 break;
             case R.id.button2:
